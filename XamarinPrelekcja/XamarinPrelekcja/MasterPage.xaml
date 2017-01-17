@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamarinPrelekcja="clr-namespace:XamarinPrelekcja;assembly=XamarinPrelekcja"
+             x:Class="XamarinPrelekcja.MasterPage" Title="{Binding Title}" MasterBehavior="Split">
+
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <Label Text="Menu" VerticalOptions="Center" HorizontalOptions="Center" />
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <ContentPage Title="View">
+      <xamarinPrelekcja:ListaView></xamarinPrelekcja:ListaView>
+    </ContentPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>

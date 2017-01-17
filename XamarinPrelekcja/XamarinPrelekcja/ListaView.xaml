@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="XamarinPrelekcja.ListaView">
+  <ContentView.Content>
+    <StackLayout Orientation="Vertical">
+      <Label Text="To jest lista uczestnikow:"></Label>
+      <ListView x:Name="Lista" BindingContext="lista" IsPullToRefreshEnabled="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Label Text="{Binding ID}"></Label>
+              <Label Text="{Binding Imie}"></Label>
+              <Label Text="{Binding Nazwisko}"></Label>
+            </StackLayout>
+          </ViewCell>
+       </DataTemplate>
+       </ListView.ItemTemplate>
+       
+      </ListView>
+    </StackLayout>
+  </ContentView.Content>
+</ContentView>
